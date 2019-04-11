@@ -1,0 +1,151 @@
+
+.menu-toggle {
+    background-color: transparent;
+    border: 1px solid $line_color;
+    font-size: 13px;
+    padding: 6px 15px;
+    @include media-breakpoint-up(lg){
+        display: none;
+    }
+}
+.site-header-menu {
+    display: none;
+    
+    &.toggled-on{
+        display: block;
+    }
+    .fallback-menu{
+        padding:23px 15px;
+    }
+    .primary-menu{
+        border-bottom: 1px solid $line_color;
+        .menu-item{
+            border-bottom: 1px solid $line_color;
+            position: relative;
+            &:last-child{
+                border-bottom: 0;
+            }
+            .dropdown-toggle{
+                background-color: transparent;
+                border: 0;
+                border-radius: 0;
+                content: "";
+                height: 48px;
+                padding: 0;
+                position: absolute;
+                right: 0;
+                text-transform: none;
+                top: 0;
+                width: 48px;
+            }
+            a{
+                display: block;
+                padding:10px 15px;
+                color:inherit;
+            }
+            &:hover{
+                > a{
+                    @extend .primary_color;
+                }
+            }
+        }
+        .sub-menu{
+            display: none;
+            margin-left: 0.875em;
+
+        }
+        .toggled-on{
+            display: block;
+        }
+    }
+
+    @include media-breakpoint-up(lg){
+        display: block;
+        .primary-menu{
+            display: flex;
+            flex-wrap:wrap;
+            margin-bottom: 0;
+            border-bottom: 0;
+            > .menu-item{
+                > a{
+                    padding: 30px 20px;
+                }
+
+                > .sub-menu{
+                    position:absolute;
+                    top:100%;
+                }
+
+                &.menu-item-has-children{
+                    > a{
+                        position: relative;
+                        &:after{
+                            position: absolute;
+                            right:2px;
+                            top:30px;
+                            content: "\f0d7";
+                            @include icon();
+                        }
+                    }
+                }
+
+            }
+            .menu-item{
+                position: relative;
+                a{
+                    color:inherit;
+                    display: block;
+                }
+                .dropdown-toggle{
+                    display: none;
+                }
+
+                .sub-menu{
+                    margin-left: 0;
+                    display: block;
+                    min-width: 200px;
+                    background-color: #fff;
+                    border:1px solid $line_color;
+                    visibility: hidden;
+                    opacity: 0;
+                    @include transition();
+                    z-index: 100;
+                    transform: translateY(30px);
+                    .menu-item{
+                        &.menu-item-has-children{
+                            > a{
+                                position: relative;
+                                &:after{
+                                    content: "\f0da";
+                                    @include icon();
+                                    position: absolute;
+                                    top:10px;
+                                    right: 5px;
+                                }
+                            }
+                        }
+                        .sub-menu{
+                            position: absolute;
+                            left:100%;
+                            top:-1px;
+
+                        }
+                    }
+                }
+                &:hover{
+                    
+                    > .sub-menu{
+                        visibility: visible;
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+            }
+
+
+        }
+    }
+
+}
+

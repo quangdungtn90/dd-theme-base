@@ -1,0 +1,86 @@
+//tab action
+.woocommerce{
+    div.product{
+        .woocommerce-tabs{
+            ul.tabs{
+                font-size: 0;
+                overflow-x: scroll;
+                white-space: nowrap;
+                overflow-y: hidden;
+                margin:0 0 15px 0;
+                padding:0;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+                &:before{
+                    border:0;
+                }
+                li{
+                    font-size: 14px;
+                    border:0;
+                    height: 35px;
+                    display: inline-block;
+                    line-height: 35px;
+                    border-radius: 0;
+                    padding: 0;
+                    margin: 0;
+                    border: 1px solid $line_color;
+                    background-color: transparent;
+                    &:before,
+                    &:after{
+                        display: none;
+                    }
+                    a{
+                        padding: 0 12px;
+                        margin: 0;
+                    }
+                    &.active{
+                        a{
+                            @extend .primary_color;
+                        }
+                        border-bottom-color: $line_color;
+                    }
+                }
+
+                @include media-breakpoint-up(md){
+                    margin-bottom: 30px;
+                    li{
+                        height: 45px;
+                        line-height: 45px;
+                        a{
+                            padding: 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//detail
+.woocommerce{
+    .woocommerce-Tabs-panel--description{
+        > h2{
+            &:first-child{
+                display: none;
+            }
+        }
+    }
+    .woocommerce-Tabs-panel--reviews{
+        #comments{
+            > h2{
+                display: none;
+            }
+        }
+        #respond{
+            .comment-form{
+                input#submit{
+                    margin-top: 10px;
+                    @extend .dd-base-btn;
+                }
+            }
+        }
+
+    }
+
+}

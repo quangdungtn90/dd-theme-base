@@ -1,0 +1,225 @@
+/* Awebooking TABs
+----------------------------------*/
+.event-tab__controls {
+    li {
+        position: relative;
+        border-bottom: none;
+
+        a {
+            display: block;
+            padding-bottom: 10px;
+            margin-right: 30px;
+            outline: none;
+            @extend .secondary_font;
+            border-bottom:2px solid transparent;
+            color: inherit;
+            text-transform: uppercase;
+            font-weight: 500;
+            @media (max-width: 480px) {
+                padding: 0;
+            }
+
+        }
+        &.active{
+            a{
+                @extend .primary_color;
+                @extend .secondary_bdb_color;
+            }
+        }
+        &:first-child{
+            a{
+                padding-left: 0;
+            }
+        }
+    }
+
+}
+
+.event-tab__wrapper {
+    position: relative;
+    border-top: 1px solid rgba(0,0,0,0.3);
+    margin-top: -1px;
+    padding: 30px 0;
+}
+.event-tab__controls {
+    position: relative;
+    z-index: 9999;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    li {
+        display: inline-block;
+        font-size: 16px;
+    }
+}
+
+.event-tab__content {
+    display: none;
+}
+.single{
+    &.event-one{
+        .dates_tab{
+
+        }
+    }
+    &.single-event{
+        &.sidebar-position-none{
+            .site-main{
+                .event{
+                    &__media{
+                        .event-carousel-nav{
+                            @include media-breakpoint-up(lg){
+                                margin-top: -85px;
+                            }
+                        }
+                    }
+                    &-tab{
+                        @include media-breakpoint-up(md){
+                            margin-top: 50px;
+                        }
+                    }
+                }
+            }
+
+        }
+        .site-main{
+
+            .event{
+                &-date{
+                    &__item{
+                        &:last-child{
+                            border: none;
+                        }
+                        padding-bottom: 15px;
+                        padding-top: 15px;
+                        border-bottom: 1px solid rgba(0,0,0,0.1);
+                        display: flex;
+                        .item-date{
+                            @extend .primary_bg_color;
+                            line-height: 1.1;
+                            padding: 10px 5px;
+                            text-align: center;
+                            min-width: 60px;
+                            .item-day {
+                                font-size: 26px;
+                                font-weight: 700;
+                                @extend .primary_text_color;
+                            }
+                            .item-weekday {
+                                font-weight: 600;
+                                text-transform: uppercase;
+                                font-size: 16px;
+                                width: 100%;
+                                color: #fff;
+                            }
+
+                        }
+                        .item{
+                            &-time{
+                                align-self: center;
+                                margin-left: 15px;
+                            }
+                        }
+                    }
+                }
+                &--address,&-date{
+                    border: none;
+                    padding: 0;
+                }
+                &-meta{
+                    div.event-date{
+                        padding: 0;
+                        border: none;
+                        margin-right: 50px;
+                        margin-bottom: 10px;
+                    }
+                    .div.event--address{
+                        padding: 0;
+                        border: none;
+                        margin-bottom: 10px;
+                    }
+                }
+                &__media{
+                    .event-room-type__image{
+                        @extend .margin_element;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    .event-slider{
+                        padding-bottom: 0;
+                    }
+                    .event-carousel-nav {
+                        .slick-prev,
+                        .slick-next{
+                            &:before{
+                                @extend %font_icon;
+                                color: #222;
+                                width: 30px;
+                                height: 30px;
+                                background: #fff;
+                                border-radius: 50%;
+                                opacity: 1;
+                                line-height: 28px;
+                                text-align: center;
+                            }
+                            &:hover{
+                                &:before{
+                                    @extend .primary_bg_color;
+                                }
+                            }
+
+                        }
+                        .slick-prev {
+                            width: 30px;
+                            height: 30px;
+                            left: 0;
+                            z-index: 9;
+                            &:before{
+                                content: '\f104';
+                            }
+                        }
+                        .slick-next {
+                            width: 30px;
+                            height: 30px;
+                            right: 0;
+                            &:before{
+                                content: '\f105';
+                            }
+                        }
+                        margin-left: -10px;
+                        margin-right: -10px;
+                        .item{
+                            padding: 10px;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                                img{
+                                border: 3px solid #fff;
+                            }
+                            @include media-breakpoint-up(lg){
+                                padding: 20px;
+                            }
+                        }
+                        @include media-breakpoint-up(lg){
+                            width: 95%;
+                            margin-top: -65px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            .slick-prev {
+                                left: 8px;
+
+                            }
+                            .slick-next {
+                                right: 8px;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}

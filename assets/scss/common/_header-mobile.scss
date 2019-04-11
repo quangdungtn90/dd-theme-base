@@ -1,0 +1,190 @@
+.site-header-mobile{
+    overflow: hidden;
+    &__top{
+        display: flex;
+        height: 50px;
+        align-items: center;
+        box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.12);
+        background-color: #fff;
+        button{
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__button-left,
+    &__button-right{
+        flex:0 0 50px;
+        background-color: transparent;
+        border:0;
+        cursor: pointer;
+        &:hover{
+            @extend .primary_color;
+        }
+    }
+
+    .site-branding{
+        flex: 0 0 calc(100% - 100px);
+        text-align: center;
+        .site-title{
+            font-size: 18px;
+            line-height: 1;
+        }
+        .site-description{
+            font-size: 13px;
+        }
+        .logo{
+            img{
+                max-height: 40px;
+                width: auto;
+            }
+        }
+    }
+    &__primary-menu{
+        > li{
+            border-bottom: 1px solid #444;
+        }
+        li{
+            position: relative;
+            a{
+                display: block;
+                font-size: 14px;
+                padding: 10px 15px;
+                color: #fff;
+            }
+            &.menu-item-has-children{
+                padding-right: 30px;
+                .toggle-submenu{
+                    cursor: pointer;
+                    color:#fff;
+                    right:15px;
+                    top:9px;
+                    position: absolute;
+                    &:before{
+                        @extend %font_icon;
+                        content: '\f067';
+                    }
+                    &.open{
+                        &:before{
+                            content: '\f068';
+                        }
+                    }
+                }
+            }
+            .sub-menu{
+                padding-left:20px;
+                display: none;
+            }
+        }
+    }
+    &__close-content{
+        color:#fff;
+        padding: 0 15px;
+        margin-bottom: 15px;
+        i{
+            cursor: pointer;
+            font-size: 20px;
+        }
+    }
+    &__content-left{
+        transform: translateX(calc(-100% - 50px));
+        .site-header-mobile__close-content{
+            text-align: right;
+        }
+    }
+    &__content-right{
+        transform: translateX(calc(100% + 50px));
+    }
+    &__content-left,
+    &__content-right{
+        @include transition();
+        position: fixed;
+        width: calc(100% - 50px);
+        height: 100%;
+        z-index: 999999;
+        top:0;
+        background-color: #333;
+        padding: 15px 0;
+        overflow-y: scroll;
+        &.show-content{
+            transform: translateX(0);
+        }
+    }
+    &__content-left{
+        left:0;
+    }
+    &__content-right{
+        right:0;
+    }
+    &__content-right{
+        .account_nav__login{
+            text-align: center;
+            a{
+                display: inline-block;
+                color:#fff;
+            }
+        }
+        .account_nav__heading{
+            text-align: center;
+            color:#fff;
+            font-size: 16px;
+            display: block;
+            img{
+                border-radius: 50%;
+                margin-right: 3px;
+                position: relative;
+                top:-2px;
+            }
+            margin-bottom: 15px;
+        }
+        .account_nav__content{
+            ul{
+                li{
+                    border-top: 1px solid #444;
+                    a{
+                        display: block;
+                        font-size: 14px;
+                        padding: 10px 15px;
+                        color: #fff;
+                        &:hover{
+                            @extend .primary_color;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    &__search-form{
+        padding: 0 15px;
+        margin-bottom: 5px;
+        .search-form{
+            input{
+                border-radius: 20px;
+            }
+        }
+    }
+    @include media-breakpoint-up(lg){
+        display: none;
+    }
+
+}
+
+.content-overlay{
+    position: relative;
+    &:before{
+        position: fixed;
+        content: '';
+        background-color: rgba(0,0,0,.7);
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        @include transition();
+    }
+}

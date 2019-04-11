@@ -1,0 +1,16 @@
+.map {
+    &__title{
+
+    }
+    &__canvas {
+        position: relative;
+    }
+
+    &--reponsive {
+        .map__canvas {
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            height: 0;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.woocommerce{
+    div.product{
+        p.price,
+        span.price{
+            @extend .woo-product-price;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 14, 2017, 5:32:58 PM
+    Author     : HP 6200 Pro
+*/
+
+.entry-footer {
+  .entry-share{
+    a{
+      @extend .secondary_text_color;
+    }
+  }
+  color: #686868;
+  font-size: 13px;
+  .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+  }
+  > span:after {
+    display: inline-block;
+    padding: 0 7px;
+  }
+  @include make-row();
+  > div{
+    @include make-col-ready();
+  }
+  @include media-breakpoint-up(md){
+    > div{
+      @include make-col(6);
+    }
+    .entry-meta{
+      + {
+        .entry-share{
+          text-align: right;
+        }
+      }
+    }
+  }
+}

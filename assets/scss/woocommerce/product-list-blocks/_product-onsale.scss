@@ -1,0 +1,9 @@
+.woocommerce{
+    ul.products{
+        li.product{
+            .onsale{
+                @extend .on-sale;
+            }
+        }
+    }
+}

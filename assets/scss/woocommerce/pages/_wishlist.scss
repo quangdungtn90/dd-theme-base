@@ -1,0 +1,33 @@
+.woocommerce-wishlist{
+    table.wishlist_table{
+        font-size: 14px;
+        border-collapse: collapse;
+        @extend .table;
+        @extend .table-responsive;
+
+        td{
+            vertical-align: middle;
+            &.product-add-to-cart{
+                a{
+                    @extend .dd-base-btn;
+                    @extend .dd-base-btn--sm;
+                    display: flex !important;
+                }
+            }
+        }
+        .yith-wcwl-share{
+            margin-bottom: 0;
+            h4{
+                margin: 0;
+                font-size: 16px;
+                align-self: center;
+            }
+            display: flex;
+        }
+    }
+    .wishlist-title{
+        h2{
+            @extend .box_title;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 14, 2017, 5:30:12 PM
+    Author     : HP 6200 Pro
+*/
+
+.entry-meta{
+  .author.vcard{
+    img{
+      display: none;
+    }
+    a:before{
+      @extend %icon;
+      content: "\f007";
+      margin-right: 5px;
+    }
+  }
+  .avatar {
+    height: 21px;
+    margin: -2px 2px 0 0;
+    width: 21px;
+    border-radius: 50%;
+    @include media-breakpoint-up(lg){
+      height: auto;
+      margin: 0 0 5px;
+      width: 49px;
+    }
+  }
+  > span{
+    margin-right: 15px;
+    &:last-child{
+      margin-right:0;
+    }
+    &.post-on{
+      time{
+        +time{
+          display:none;
+        }
+      }
+    }
+  }
+  .entry-date:before{
+    @extend %icon;
+    content: "\f133";
+    margin-right: 5px;
+  }
+  .comments-link a:before{
+    @extend %icon;
+    content: "\f0e5";
+    margin-right: 3px;
+  }
+  .cat-links:before{
+    @extend %icon;
+    content: "\f114";
+    margin-right: 3px;
+  }
+  .tags-links:before{
+    @extend %icon;
+    content: "\f02c";
+    margin-right: 3px;
+  }
+  a{
+    @extend .secondary_text_color;
+  }
+  a:hover{
+    @extend .primary_color;
+  }
+}
+@include media-breakpoint-up(lg){
+  .entry-meta{
+    .entry-date:before, .comments-link a:before,.cat-links:before,.tags-links:before,.author.vcard a:before{
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.woocommerce {
+    .woocommerce-review-link{
+        color:inherit;
+        margin-top: 2px;
+        margin-left: 5px;
+        display: inline-block;
+        &:hover{
+            @extend .primary_text_color;
+        }
+    }
+
+    .woocommerce-product-rating{
+        .star-rating{
+            @extend .star-rating;
+        }
+    }
+    .woocommerce-Reviews{
+        .comment{
+            .star-rating{
+                @extend .star-rating;
+            }
+        }
+        p.stars{
+            @extend .primary_color;
+        }
+    }
+}

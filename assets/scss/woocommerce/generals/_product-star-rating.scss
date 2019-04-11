@@ -1,0 +1,17 @@
+.star-rating{
+    width: 84px;
+    font-size: 18px;
+    span {
+        &:before {
+            @extend %font_icon;
+            content:'\f005\f005\f005\f005\f005';
+            font-size: 18px;
+        }
+        @extend .primary_color;
+    }
+    &:before {
+        @extend %font_icon;
+        content:'\f005\f005\f005\f005\f005';
+        font-size: 18px;
+    }
+}

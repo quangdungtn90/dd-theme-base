@@ -1,0 +1,12 @@
+.woocommerce{
+    div.product{
+        .product_meta{
+            a{
+                @extend .secondary_text_color;
+                &:hover{
+                    @extend .primary_color;
+                }
+            }
+        }
+    }
+}

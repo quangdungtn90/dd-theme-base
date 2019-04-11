@@ -1,0 +1,98 @@
+.woocommerce-billing-fields{
+    > h3{
+        @extend .box_title;
+    }
+}
+.woocommerce-checkout {
+    .checkout{
+        .col-2{
+            h3#ship-to-different-address{
+                @extend .box_title;
+            }
+        }
+    }
+}
+#order_review_heading{
+    @extend .box_title;
+}
+
+.select2-container {
+    .select2-selection--single{
+        height: 40px;
+        .select2-selection__rendered{
+            line-height: 40px;
+        }
+        .select2-selection__arrow{
+            top:7px;
+        }
+    }
+    @include media-breakpoint-up(md){
+        .select2-selection--single{
+            height: 50px;
+            .select2-selection__rendered{
+                line-height: 50px;
+            }
+            .select2-selection__arrow{
+                top:11px;
+            }
+        }
+    }
+}
+.woocommerce{
+    #payment{
+        #place_order{
+            @extend .dd-base-btn;
+        }
+    }
+    form.checkout_coupon{
+        padding:0;
+        border:0;
+        button.button{
+            @extend .dd-base-btn;
+        }
+        .form-row{
+            &.form-row-last{
+                float:left;
+            }
+        }
+    }
+}
+
+.woocommerce-checkout{
+    .col2-set{
+        @include make-row();
+        @extend .margin_element;
+        width:auto;
+        .col-1,.col-2{
+            @include make-col-ready();
+            @include make-col(12);
+        }
+        .col-1{
+            margin-bottom: 15px;
+        }
+    }
+    .woocommerce-shipping-fields{
+        #ship-to-different-address{
+            > label{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .woocommerce{
+        table.shop_table{
+            border-collapse: collapse;
+            @extend .margin_element;
+        }
+    }
+    @include media-breakpoint-up(lg){
+        .col2-set{
+            .col-1{
+                @include make-col(6);
+                margin-bottom: 0;
+            }
+            .col-2{
+                @include make-col(6);
+            }
+        }
+    }
+}

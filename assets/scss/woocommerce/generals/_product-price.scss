@@ -1,0 +1,20 @@
+.woo-product-price{
+    @extend .primary_color;
+    display: flex;
+    font-weight: bold;
+    del{
+        font-weight: normal;
+        font-size: 0.85em;
+        order:2;
+        @extend .primary_text_color;
+        + ins{
+            margin-right: 5px;
+        }
+    }
+    ins{
+        text-decoration: none;
+    }
+    .woocommerce-Price-currencySymbol{
+        font-size: 0.85em;
+    }
+}

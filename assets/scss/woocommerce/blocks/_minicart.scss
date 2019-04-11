@@ -1,0 +1,79 @@
+.minicart {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+
+    &__heading {
+        color: inherit;
+        line-height: 44px;
+        padding: 0px 5px;
+        display: block;
+        font-size: 13px;
+        i{
+            font-size: 18px;
+        }
+    }
+    &__content {
+        @include dropdownpanel();
+        @include transition();
+        @extend .minilist;
+        padding: 15px;
+        width: 350px;
+        left: auto;
+        right: -75px;
+        @extend .primary_text_color;
+
+        &:before {
+            right: 85px;
+        }
+
+        .widget.widget_shopping_cart {
+            margin-bottom: 0;
+
+            .cart_list {
+                .mini_cart_item {
+                    img {
+                        width: 50px;
+                        float: left;
+                        margin-right: 10px;
+                    }
+                    .quantity {
+                        @extend .secondary_text_color;
+                    }
+                    padding-bottom: 12px;
+                    margin-bottom: 12px;
+                    border-bottom: 1px solid rgba(0, 0, 0, .08);
+                }
+            }
+            .total {
+                border-top: 0;
+                display: flex;
+                strong {
+                    align-self: center;
+                    vertical-align: middle;
+                    @extend .secondary_text_color;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                }
+                .amount {
+                    font-weight: 600;
+                    font-size: 20px;
+                    margin-left: auto;
+                }
+            }
+
+        }
+    }
+
+    .woocommerce-mini-cart__empty-message {
+        padding: 15px;
+        margin: 0;
+    }
+
+    &:hover {
+        .minicart__content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

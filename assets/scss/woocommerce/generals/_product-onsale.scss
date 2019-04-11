@@ -1,0 +1,13 @@
+.on-sale{
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    top:0;
+    left:15px;
+    right:auto;
+    border-radius: 0;
+    line-height: 1;
+    font-size: 12px;
+    padding: 5px 10px;
+    @extend .secondary_bg_color;
+}

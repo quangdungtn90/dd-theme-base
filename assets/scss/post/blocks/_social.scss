@@ -1,0 +1,18 @@
+.social-links,
+.social-navigation ul,
+.user-contact-methods{
+    margin-bottom:0;
+    font-size:15px;
+    li{
+        display: inline-block;
+        margin-right: 15px;
+        &:last-child{
+            margin-right: 0;
+        }
+        a{
+            &:hover{
+                @extend .secondary_color;
+            }
+        }
+    }
+}

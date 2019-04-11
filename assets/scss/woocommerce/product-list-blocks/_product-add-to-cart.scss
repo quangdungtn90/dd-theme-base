@@ -1,0 +1,21 @@
+.add-to-cart{
+    @extend .dd-base-btn;
+}
+.woocommerce{
+    ul.products{
+        li.product{
+            .add_to_cart_button,
+            .product_type_grouped{
+                @extend .add-to-cart;
+            }
+            .product_type_external{
+                padding:0;
+                background-color: transparent;
+                @extend .primary_color;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.heading{
+    text-transform: uppercase;
+    &__title{
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        @extend .secondary_font;
+        margin-bottom: 0;
+    }
+    &__description{
+        font-size: 16px;
+        @extend .secondary_text_color;
+    }
+    &--center{
+        text-align: center;
+    }
+    &--right{
+        text-align: right;
+    }
+
+    @include media-breakpoint-up(md){
+        &__title{
+            font-size: 30px;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.woocommerce{
+    div.product{
+        .product_title{
+            @extend .product-title;
+        }
+    }
+}

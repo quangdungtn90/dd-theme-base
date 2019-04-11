@@ -1,0 +1,23 @@
+
+//reduced gutter width in mobile screen
+
+.row{
+    margin-left: - 7.5px;
+    margin-right: -7.5px;
+    > [class*="col-"]{
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+    }
+}
+
+@include media-breakpoint-up(md){
+    .row{
+        margin-left: -15px;
+        margin-right: -15px;
+        > [class*="col-"]{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+

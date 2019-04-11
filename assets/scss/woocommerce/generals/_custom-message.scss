@@ -1,0 +1,23 @@
+.message-base{
+    padding: 10px 15px 10px 30px;
+    font-size: 14px;
+    @extend .margin_element;
+    &:before{
+        left:8px;
+        top:10px;
+    }
+    @include media-breakpoint-up(md){
+        padding: 15px 20px 15px 40px;
+        font-size: 16px;
+        &:before{
+            left:15px;
+            top:15px;
+        }
+    }
+}
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message{
+    @extend .message-base;
+}

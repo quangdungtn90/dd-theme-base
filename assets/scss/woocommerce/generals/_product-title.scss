@@ -1,0 +1,9 @@
+.product-title{
+    @extend .primary_text_color;
+    a{
+        @extend .primary_text_color;
+        &:hover{
+            @extend .primary_color;
+        }
+    }
+}

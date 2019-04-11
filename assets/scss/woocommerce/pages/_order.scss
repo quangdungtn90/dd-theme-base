@@ -1,0 +1,17 @@
+.woocommerce-order-received{
+    .woocommerce{
+        ul.order_details{
+            padding-left:0;
+            @extend .margin_element;
+        }
+        .woocommerce-order-details{
+            @extend .margin_element;
+            &__title{
+                @extend .box_title;
+            }
+        }
+        .woocommerce-column__title{
+            @extend .box_title;
+        }
+    }
+}

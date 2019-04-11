@@ -1,0 +1,30 @@
+div.event{
+    @include media-breakpoint-up(md){
+        &-meta{
+            display: flex;
+        }
+    }
+    &--address,&-date{
+        @extend .secondary_text_color;
+        padding: 5px 10px;
+        border: 1px solid;
+        border-color: rgba(0, 0, 0, 0.25);
+    }
+}
+.archive{
+    .event{
+        &-meta{
+            @include media-breakpoint-up(lg){
+                display: flex;
+                -webkit-box-pack: justify;
+                -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+            }
+            display: block;
+            > div{
+                margin-bottom: 10px ;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.site-branding{
+    &-text{
+        .site-title{
+            font-size: 20px;
+            margin-bottom: 3px;
+            font-weight:600;
+            a{
+                color:inherit;
+                &:hover{
+                    @extend .primary_color;
+                    
+                }
+            }
+        }
+        .site-description{
+            white-space: nowrap;
+            margin-bottom:0;
+            font-size:14px;
+            @extend .secondary_text_color;
+        }
+    }
+
+    @include media-breakpoint-up(lg){
+        .site-branding-text{
+            .site-title{
+                font-size: 24px;
+            }
+        }
+        
+    }
+}

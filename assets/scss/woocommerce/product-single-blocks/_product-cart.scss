@@ -1,0 +1,28 @@
+.woocommerce{
+    .quantity{
+        .qty{
+            width: 100px;
+        }
+    }
+    div.product{
+        form.cart{
+            .single_add_to_cart_button{
+                @extend .dd-base-btn;
+            }
+            .group_table{
+                border:0;
+                td{
+                    vertical-align: middle;
+                }
+                td:first-child{
+                    width: auto;
+                    text-align: left;
+                }
+                .woocommerce-grouped-product-list-item__price{
+                    @extend .woo-product-price;
+                    display: table-cell;
+                }
+            }
+        }
+    }
+}

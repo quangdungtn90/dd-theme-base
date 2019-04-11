@@ -1,0 +1,10 @@
+.woocommerce{
+    ul.products{
+        li.product{
+            .price{
+                @extend .woo-product-price;
+                font-size: 16px;
+            }
+        }
+    }
+}

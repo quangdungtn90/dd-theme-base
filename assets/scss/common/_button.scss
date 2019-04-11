@@ -1,0 +1,60 @@
+.dd-base-btn{
+    display: inline-flex;
+    cursor: pointer;
+    color:#fff;
+    height: 40px;
+    padding-left: 20px;
+    padding-right:20px;
+    font-size: 14px;
+    @extend .primary_bg_color;
+    @extend .primary_bd_color;
+    @include transition();
+    text-transform: uppercase;
+    border:1px solid;
+    letter-spacing: 0.5px;
+    white-space:nowrap;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+        @extend .secondary_bg_color;
+        @extend .secondary_bd_color;
+        color:#fff;
+    }
+    &--sm{
+        height: 35px;
+        font-size: 13px;
+        padding-left:15px;
+        padding-right: 15px;
+    }
+    &--lg{
+        font-size: 15px;
+        height: 45px;
+        padding-left:25px;
+        padding-right: 25px;
+    }
+    &.dd-base-btn--secondary{
+        @extend .secondary_bg_color;
+        @extend .secondary_bd_color;
+        &:hover{
+            @extend .primary_bg_color;
+            @extend .primary_bd_color;
+        }
+    }
+
+    @include media-breakpoint-up(lg){
+        height: 50px;
+        padding-left:25px;
+        padding-right: 25px;
+        &--sm{
+            height: 45px;
+            padding-left:20px;
+            padding-right: 20px;
+        }
+        &--lg{
+            height:55px;
+            padding-left:30px;
+            padding-right: 30px;
+        }
+    }
+}
+

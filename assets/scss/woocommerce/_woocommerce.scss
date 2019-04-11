@@ -1,0 +1,57 @@
+@mixin dropdownpanel() {
+    position: absolute;
+    text-align: left;
+    z-index: 99999;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    width: 220px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -12px;
+        right: 19%;
+        border: 6px solid transparent;
+        border-bottom-color: #fff;
+    }
+}
+
+@import "blocks/minicart";
+@import "blocks/miniwishlist";
+@import "blocks/account_nav";
+
+@import "generals/product-onsale";
+@import "generals/product-price";
+@import "generals/product-star-rating";
+@import "generals/product-title";
+@import "generals/custom-message";
+
+@import "product-list-blocks/product-onsale";
+@import "product-list-blocks/product-price";
+@import "product-list-blocks/product-star-rating";
+@import "product-list-blocks/product-title";
+@import "product-list-blocks/product-add-to-cart";
+@import "product-list-blocks/search-result-order";
+
+@import "product-single-blocks/product-onsale";
+@import "product-single-blocks/product-price";
+@import "product-single-blocks/product-star-rating";
+@import "product-single-blocks/product-title";
+@import "product-single-blocks/product-gallery";
+@import "product-single-blocks/product-meta";
+@import "product-single-blocks/product-cart";
+@import "product-single-blocks/product-tabs";
+@import "product-single-blocks/product-related";
+
+@import "layouts/product-list";
+@import "layouts/product-single";
+
+@import "pages/cart";
+@import "pages/checkout";
+@import "pages/order";
+@import "pages/wishlist";

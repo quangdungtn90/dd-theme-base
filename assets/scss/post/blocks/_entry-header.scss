@@ -1,0 +1,39 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+.entry-header {
+    @extend .margin_element;
+
+    .sticky-post {
+        color: $primary_text_color;
+        font-size: 13px;
+        letter-spacing: 1px;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+        display: inline-block;
+        @extend .primary_bg_color;
+        padding: 5px 10px;
+        color: #fff;
+
+        &:before {
+            @extend %icon;
+            content: "\f005";
+            margin-right: 5px;
+        }
+    }
+
+    .entry-title {
+        font-size: 28px;
+        font-weight: 700;
+        @include media-breakpoint-up(lg) {
+            font-size: 40px;
+        }
+
+        a:hover, a:focus {
+            color: $primary_color;
+        }
+    }
+}

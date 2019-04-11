@@ -1,0 +1,204 @@
+.widget {
+    @extend .margin_element;
+    $spacing_list: 3px 0;
+    $spacing_list_lg: 6px 0;
+
+    &-title {
+        position: relative;
+        font-size: 20px;
+        margin-top: 0;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        &:after {
+            content: "";
+            width: 70px;
+            height: 2px;
+            position: absolute;
+            bottom: 3px;
+            left: 0px;
+            @extend .secondary_bg_color;
+        }
+        a {
+            color: inherit;
+            &:hover {
+                @extend .primary_color;
+            }
+        }
+    }
+    ul {
+        li {
+            a {
+                color: inherit;
+                &:hover {
+                    @extend .secondary_color
+                }
+            }
+            > ul {
+                padding-left: 15px;
+            }
+        }
+    }
+    &_archive,
+    &_categories,
+    &_recent_comments,
+    &_rss {
+        ul {
+            li {
+                padding: $spacing_list;
+            }
+        }
+        > ul {
+            > li {
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+    &_archive,
+    &_categories {
+        ul {
+            li {
+                overflow: hidden;
+                text-align: right;
+                a {
+                    float: left;
+                    padding-left: 1px;
+                    text-align: left;
+                }
+
+            }
+        }
+    }
+    &_categories {
+        .children {
+            > li {
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &_calendar {
+        .calendar_wrap {
+            table {
+                caption {
+                    padding-top: 4px;
+                }
+                tfoot {
+                    a {
+                        @extend .primary_color;
+                        &:hover {
+                            @extend .secondary_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_pages,
+    &_meta,
+    &_recent_entries,
+    &_nav_menu {
+        ul {
+            li {
+                a {
+                    padding: $spacing_list;
+                    display: block;
+                }
+            }
+        }
+        > ul {
+            > li {
+                &:first-child {
+                    > a {
+                        padding-top: 0;
+                    }
+                }
+                &:last-child {
+                    > a {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &_recent_entries,
+    &_rss {
+        ul {
+            li {
+                a {
+                    display: block;
+                }
+                .rsswidget {
+                    font-weight: 600;
+                }
+                .rss-date {
+                    font-size: 13px;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    &_tag_cloud {
+        .tagcloud {
+            a {
+                display: inline-block;
+                padding: 5px 15px;
+                border: 1px solid $line_color;
+                margin-bottom: 8px;
+                margin-right: 4px;
+                font-size: 14px !important;
+                color: inherit;
+                &:hover {
+                    @extend .secondary_color;
+                    @extend .secondary_bd_color;
+                }
+            }
+        }
+    }
+    &_nav_menu {
+        .menu-all-pages-container {
+            > ul {
+                padding-left: 0;
+                .sub-menu {
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        &_archive,
+        &_categories,
+        &_recent_comments,
+        &_rss {
+            ul {
+                li {
+                    padding: $spacing_list_lg;
+                }
+            }
+        }
+
+        &_pages,
+        &_meta,
+        &_nav_menu {
+            ul {
+                li {
+                    a {
+                        padding: $spacing_list_lg;
+                    }
+                }
+            }
+        }
+    }
+
+}
+

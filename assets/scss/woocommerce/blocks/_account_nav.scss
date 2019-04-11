@@ -1,0 +1,62 @@
+.site-header{
+    .account_nav {
+        display: inline-block;
+        position: relative;
+
+        &__heading {
+            color: inherit;
+            line-height: 44px;
+            img{
+                margin-right: 3px;
+                border-radius: 100%;
+            }
+        }
+
+        &__content {
+
+            ul {
+                margin: 0;
+            }
+
+            @include dropdownpanel();
+            @include transition();
+            left: auto;
+            right: 0;
+
+            li {
+
+                line-height: normal;
+
+                border-bottom: 1px solid rgba(0,0,0,.08);
+                @include transition();
+                &:hover {
+                    padding-left: 2px;
+                }
+                a {
+                    @extend .primary_text_color;
+                    padding: 12px 15px;
+                    display: block;
+                    font-weight: 500;
+                    &:hover {
+                        @extend .primary_color;
+                    }
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &:hover {
+            .account_nav__content {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

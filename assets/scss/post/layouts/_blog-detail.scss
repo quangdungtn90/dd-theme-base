@@ -1,0 +1,23 @@
+/*Style single detail*/
+.single{
+    .entry-footer{
+        > div{
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        .entry-meta{
+           margin-bottom: 15px;
+            + .entry-share {
+                text-align: left;
+                >span{
+                    font-size: 1rem;
+                    color: initial;
+                }
+                .social-links{
+                    display: inline;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+//1. Primary color
+.primary_color{
+    color: $primary_color;
+}
+.primary_bg_color{
+    background-color: $primary_color;
+}
+.primary_bd_color{
+    border-color: $primary_color;
+}
+
+.primary_bdt_color{
+    border-top-color: $primary_color;
+}
+.primary_bdb_color{
+    border-bottom-color: $primary_color;
+}
+
+.primary_bdl_color{
+    border-left-color: $primary_color;
+}
+.primary_bdr_color{
+    border-right-color: $primary_color;
+}
+
+//2. Secondary color
+
+.secondary_color{
+    color:$secondary_color;
+}
+.secondary_bg_color{
+    background-color: $secondary_color;
+}
+.secondary_bd_color{
+    border-color: $secondary_color;
+}
+
+.secondary_bdt_color{
+    border-top-color: $primary_color;
+}
+.secondary_bdb_color{
+    border-bottom-color: $primary_color;
+}
+
+.secondary_bdl_color{
+    border-left-color: $primary_color;
+}
+.secondary_bdr_color{
+    border-right-color: $primary_color;
+}
+
+
+//3. Primary_text_color
+.primary_text_color{
+    color: $primary_text_color;
+}
+
+//4. Secondary_text_color
+.secondary_text_color{
+    color:  $secondary_text_color;
+}
+
+//5.font
+.primary_font{
+    font-family: $primary_font;
+}
+.secondary_font{
+    font-family: $secondary_font;
+}
+
+//6. Spacing
+
+.margin_element{
+    margin-bottom: $margin_element;
+    @include media-breakpoint-up(lg){
+        margin-bottom: $margin_element-lg;
+    }
+}
+
+.padding_element{
+    padding-bottom: $padding_element;
+    @include media-breakpoint-up(lg){
+        padding-bottom: $padding_element-lg;
+    }
+}
+
+// 7.Font icon (Default: font-awesome)
+%font_icon{
+    display: inline-block;
+    font-family: FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+//box_title
+.box_title{
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    @include media-breakpoint-up(md){
+        font-size: 24px;
+    }
+}

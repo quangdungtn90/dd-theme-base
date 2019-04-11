@@ -1,0 +1,44 @@
+/*
+Theme Name: DD Base
+Theme URI: https://demo.themespond.com/dd-base
+Author: the ThemesPond team
+Author URI: https://themespond.com/
+Description: A WordPress base theme by ThemesPond
+Version: 1.0
+License: GNU General Public License v3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: dd-base
+Tags: one-column, two-columns, right-sidebar, flexible-header, custom-colors, custom-header, custom-menu, editor-style, featured-images, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+//bootstrap variable, mixin
+@import "assets/scss/vendors/bootstrap/functions";
+@import "assets/scss/vendors/bootstrap/variables";
+@import "assets/scss/vendors/bootstrap/mixins";
+@import "assets/scss/vendors/bootstrap/tables";
+
+//common
+@import "assets/scss/variables";
+@import "assets/scss/general";
+@import "assets/scss/custom-grid";
+@import "assets/scss/mixin";
+
+//common
+@import "assets/scss/common/common";
+//post
+@import "assets/scss/post/post";
+
+//WooCommerce
+@import "assets/scss/woocommerce/woocommerce";
+
+//Event
+@import "assets/scss/event/event";
+
+
+//Testimonial
+@import "assets/scss/testimonial/testimonial";
+
+@import "assets/scss/vc/vc";
+
+@import "assets/scss/extend";
+

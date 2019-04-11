@@ -1,0 +1,26 @@
+@mixin transition( $select: all, $delay: 0.3s, $type: ease ) {
+    -webkit-transition: $select $delay $type;
+    -moz-transition: $select $delay $type;
+    -ms-transition: $select $delay $type;
+    -o-transition: $select $delay $type;
+    transition: $select $delay $type;
+}
+
+@mixin icon(){
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+%clearfix {
+    display: table;
+    content: '';
+    clear: both;
+}
+
+%icon {
+    @include icon();
+}

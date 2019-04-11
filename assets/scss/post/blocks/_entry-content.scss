@@ -1,0 +1,132 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Nov 14, 2017, 5:30:28 PM
+    Author     : HP 6200 Pro
+*/
+.entry-content {
+    @extend .margin_element;
+    > *:last-child{
+        margin-bottom: 0;
+    }
+    ul{
+        padding-left: 18px;
+        list-style: disc;
+    }
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    @include make-row();
+    .gallery-item {
+        display: inline-block;
+        margin-bottom: 15px;
+        margin-top:0;
+        @include make-col-ready();
+        max-width: 50%;
+        .gallery-caption {
+            display: block;
+            padding: 0 10px 0 0;
+            margin-bottom: 0;
+            font-size: 13px;
+            font-style: italic;
+            max-width: 100%;
+        }
+
+    }
+    &.gallery-columns-1{
+        .gallery-item{
+            max-width: 100%;
+        }
+    }
+
+    @include media-breakpoint-up(md){
+        .gallery-item{
+            margin-bottom: 30px;
+        }
+        &.gallery-columns-3 {
+            .gallery-item{
+                max-width: 33.33%;
+            }
+
+        }
+        &.gallery-columns-4  {
+            .gallery-item{
+                max-width: 25%;
+            }
+        }
+
+        &.gallery-columns-5  {
+            .gallery-item{
+                max-width: 20%;
+            }
+        }
+
+        &.gallery-columns-6  {
+            .gallery-item{
+                max-width: 16.66%;
+            }
+        }
+
+        &.gallery-columns-7  {
+            .gallery-item{
+                max-width: 14.28%;
+            }
+        }
+
+        &.gallery-columns-8  {
+            .gallery-item{
+                max-width: 12.5%;
+            }
+        }
+
+        &.gallery-columns-9  {
+            .gallery-item{
+                max-width: 11.11%;
+            }
+        }
+    }
+}
+blockquote{
+    font-weight: 400;
+    position: relative;
+    &:before{
+        content: "\f10d";
+        @extend %icon;
+        @extend .secondary_color;
+        font-size: 20px;
+        margin-bottom: 3px;
+        display: block;
+    }
+
+    p:last-child{
+        margin-bottom: 0;
+    }
+    cite{
+        display:inline-block;
+        margin-top:5px;
+
+    }
+    @include media-breakpoint-up(lg){
+        font-size: 16px;
+        &:before,
+        &:after{
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.post-password-form{
+    input[type="submit"]{
+        @extend .dd-base-btn;
+    }
+}
+.page-links{
+    > a{
+        margin-right: 15px;
+    }
+}

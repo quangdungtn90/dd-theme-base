@@ -1,0 +1,45 @@
+.site-header {
+    display: none;
+    padding: 15px 0;
+    @include media-breakpoint-up(lg) {
+        display: block;
+        padding: 0;
+    }
+    &__topbar{
+        background-color: #222;
+        color: #ddd;
+        font-size: 14px;
+
+        .container{
+            display: flex;
+            height: 44px;
+        }
+
+        &-left{
+            align-self: center;
+        }
+        &-right{
+            margin-left: auto;
+            flex: 0 1 auto;
+        }
+    }
+
+}
+
+
+.site-header__main {
+    display: flex;
+    flex-wrap: wrap;
+    .site-branding {
+        align-self: center;
+    }
+    .site-header-menu {
+        margin-left: auto;
+        flex: 0 1 100%;
+    }
+    @include media-breakpoint-up(lg) {
+        .site-header-menu {
+            flex: 0 1 auto;
+        }
+    }
+}

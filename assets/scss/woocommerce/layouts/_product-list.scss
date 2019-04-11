@@ -1,0 +1,68 @@
+/*Grid*/
+.woocommerce,
+.woocommerce-page{
+    ul.products[class*=columns-]{
+        @include make-row();
+        li.product{
+            @include make-col-ready();
+            @include make-col(12);
+            float:none;
+            clear: none;
+            width: auto;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+        &:before,
+        &:after{
+            display: none;
+        }
+        @include media-breakpoint-up(sm){
+            li.product{
+                @include make-col(6);
+                margin-bottom: 30px;
+            }
+        }
+        @include media-breakpoint-up(md){
+            li.product{
+                @include make-col(4);
+            }
+        }
+    }
+    ul.products{
+        @include media-breakpoint-up(lg){
+            &.columns-4{
+                li.product{
+                    @include make-col(3);
+                }
+            }
+            &.columns-3{
+                li.product{
+                    @include make-col(4);
+                }
+            }
+            &.columns-2{
+                li.product{
+                    @include make-col(6);
+                }
+            }
+        }
+    }
+}
+
+.woocommerce{
+    ul.products{
+        li.product{
+            .onsale{
+                @extend .on-sale;
+            }
+            .price{
+                @extend .woo-product-price;
+                font-size: 16px;
+            }
+            .star-rating{
+                @extend .star-rating;
+            }
+        }
+    }
+}

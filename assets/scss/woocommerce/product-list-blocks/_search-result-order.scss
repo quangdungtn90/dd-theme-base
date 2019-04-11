@@ -1,0 +1,26 @@
+.woocommerce{
+    .woocommerce-result-count{
+        margin-bottom: 15px;
+        float:none;
+    }
+    .woocommerce-ordering{
+        float:none;
+        margin-bottom: 25px;
+    }
+    @include media-breakpoint-up(sm){
+        .woocommerce-result-count{
+            margin-top: 8px;
+            margin-bottom: 15px;
+            float:left;
+        }
+        .woocommerce-ordering{
+            float:right;
+            margin-bottom: 35px;
+        }
+    }
+    @include media-breakpoint-up(md){
+        .woocommerce-result-count{
+            margin-top: 14px;
+        }
+    }
+}

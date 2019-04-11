@@ -1,0 +1,48 @@
+.event{
+    .inner{
+        padding-left: 0;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        .entry-title{
+            a{
+                .title{
+                    @extend .primary_text_color;
+                    margin-bottom: 20px;
+                }
+                &:hover{
+                    .title{
+                        @extend .primary_color;
+                    }
+                }
+            }
+        }
+        .entry-content{
+            margin-bottom: 30px;
+        }
+
+    }
+    &__list-date{
+        line-height: 1;
+        .event-day__start{
+            font-size: 90px;
+            font-weight: 500;
+            @extend .primary_color;
+        }
+        .event-month__start {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
+    .thumbnail{
+        @include media-breakpoint-up(lg){
+            order: 2;
+        }
+        a{
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+}

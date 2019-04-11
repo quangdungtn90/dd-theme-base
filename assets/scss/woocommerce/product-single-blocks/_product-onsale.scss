@@ -1,0 +1,8 @@
+.woocommerce{
+    div.product{
+        span.onsale{
+            @extend .on-sale;
+            left: 0;
+        }
+    }
+}

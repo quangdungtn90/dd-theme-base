@@ -1,0 +1,25 @@
+.search-form{
+    position: relative;
+    .search-field{
+        padding-right:45px;
+    }
+    button{
+        position: absolute;
+        top:0;
+        right: 0;
+        width: 40px;
+        text-align: center;
+        height: 100%;
+        cursor:pointer;
+        background-color:transparent;
+        border:0;
+        @include transition();
+        &:before{
+            content: "\f002";
+            @extend %icon;
+        }
+        &:hover{
+            @extend .secondary_color;
+        }
+    }
+}

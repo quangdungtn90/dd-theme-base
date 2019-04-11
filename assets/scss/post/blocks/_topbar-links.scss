@@ -1,0 +1,35 @@
+.topbar_links{
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 14px;
+    li{
+        display: inline-block;
+        margin-right: 10px;
+    }
+    a{
+        color: inherit;
+    }
+
+    a[href*="tel:"],
+    a[href*="mailto:"]{
+        &:before{
+            @extend %icon;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+    }
+    a[href*="tel:"]{
+        &:before{
+            content: "\f098";
+            font-size: 16px;
+            position: relative;
+            top:1px;
+        }
+    }
+    a[href*="mailto:"]{
+        &:before{
+            content: "\f0e0";
+        }
+    }
+}

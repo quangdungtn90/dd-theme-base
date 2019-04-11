@@ -1,0 +1,9 @@
+.woocommerce{
+    ul.products{
+        li.product{
+            .star-rating{
+                @extend .star-rating;
+            }
+        }
+    }
+}
